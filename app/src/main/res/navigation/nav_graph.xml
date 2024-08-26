@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginScreen">
+
+    <fragment
+        android:id="@+id/screen1"
+        android:name="com.example.rasd.Screen1"
+        android:label="fragment_screen1"
+        tools:layout="@layout/fragment_screen1" >
+        <action
+            android:id="@+id/action_screen1_to_screen2"
+            app:destination="@id/screen2" />
+    </fragment>
+    <fragment
+        android:id="@+id/screen2"
+        android:name="com.example.rasd.Screen2"
+        android:label="fragment_screen2"
+        tools:layout="@layout/fragment_screen2" />
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.example.rasd.LoginScreen"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreen_to_register_Fragment"
+            app:destination="@id/register_Fragment" />
+        <action
+            android:id="@+id/action_loginScreen_to_camera_screen"
+            app:destination="@id/camera_screen" />
+        <action
+            android:id="@+id/action_loginScreen_to_register_info"
+            app:destination="@id/register_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/register_Fragment"
+        android:name="com.example.rasd.Register_Fragment"
+        android:label="fragment_register_"
+        tools:layout="@layout/fragment_register_" >
+        <action
+            android:id="@+id/action_register_Fragment_to_camera_screen"
+            app:destination="@id/camera_screen" />
+    </fragment>
+    <fragment
+        android:id="@+id/home_Fragment"
+        android:name="com.example.rasd.Home_Fragment"
+        android:label="fragment_home_"
+        tools:layout="@layout/fragment_home_" />
+    <fragment
+        android:id="@+id/camera_screen"
+        android:name="com.example.rasd.camera_screen"
+        android:label="fragment_camera_screen"
+        tools:layout="@layout/fragment_camera_screen" />
+    <fragment
+        android:id="@+id/register_info"
+        android:name="com.example.rasd.register_info"
+        android:label="fragment_register_info"
+        tools:layout="@layout/fragment_register_info" >
+        <action
+            android:id="@+id/action_register_info_to_camera_screen"
+            app:destination="@id/camera_screen" />
+    </fragment>
+</navigation>
