@@ -31,12 +31,13 @@ class Screen2 : Fragment() {
         webSocketManager = WebSocketManager()
 
         // Connect to the WebSocket server
-        webSocketManager.connect("wss://1bbf-136-176-6-44.ngrok-free.app/ask", uid!!)
+        webSocketManager.connect("wss://rasd-8bd8c.uc.r.appspot.com/ask", uid!!);
+
 
         val btn = view.findViewById<Button>(R.id.btndone)
 
         btn.setOnClickListener {
-            webSocketManager.send("hey this is a moment command")
+            webSocketManager.send("mobile","123","this is my command")
         }
 
     }

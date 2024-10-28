@@ -13,4 +13,5 @@
     <string name="name">Name</string>
     <string name="register">Register</string>
     <string name="phone_number">Phone Number</string>
+    <string name="rasd">RASD</string>
 </resources>
