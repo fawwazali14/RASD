@@ -52,7 +52,25 @@
         android:id="@+id/camera_screen"
         android:name="com.example.rasd.camera_screen"
         android:label="fragment_camera_screen"
-        tools:layout="@layout/fragment_camera_screen" />
+        tools:layout="@layout/fragment_camera_screen" >
+        <action
+            android:id="@+id/action_camera_screen_to_control_robot"
+            app:destination="@id/control_robot" />
+        <action
+            android:id="@+id/action_camera_screen_to_chatgpt"
+            app:destination="@id/chatgpt" />
+    </fragment>
+    <fragment
+        android:id="@+id/control_robot"
+        android:name="com.example.rasd.ControlRobot"
+        android:label="fragment_camera_screen"
+        tools:layout="@layout/fragment_control_robot" />
+
+    <fragment
+        android:id="@+id/chatgpt"
+        android:name="com.example.rasd.ChatGPTFragment"
+        android:label="fragment_chat_gpt"
+        tools:layout="@layout/fragment_chat_g_p_t" />
     <fragment
         android:id="@+id/register_info"
         android:name="com.example.rasd.register_info"
