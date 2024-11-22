@@ -82,7 +82,7 @@ class LoginScreen : Fragment() {
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
                     // Sign in success
-                    findNavController().navigate(R.id.action_loginScreen_to_camera_screen)
+                    findNavController().navigate(R.id.action_loginScreen_to_real_time_camera)
 
                 } else {
                     // If sign in fails, display a message to the user.
@@ -139,7 +139,7 @@ class LoginScreen : Fragment() {
             userRef.get().addOnSuccessListener { document ->
                 if (document != null && document.exists()) {
                     // If the document exists, it's not the first time logging in
-                    findNavController().navigate(R.id.action_loginScreen_to_camera_screen)
+                    findNavController().navigate(R.id.action_loginScreen_to_real_time_camera)
                 } else {
                     // If the document doesn't exist, it's the first time logging in
                         findNavController().navigate(R.id.action_loginScreen_to_register_info)

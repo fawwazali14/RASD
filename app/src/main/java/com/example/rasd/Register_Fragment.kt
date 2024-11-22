@@ -74,7 +74,7 @@ class Register_Fragment : Fragment() {
                     val user = auth.currentUser
                     val userRef = Firebase.firestore.collection("users").document(user!!.uid)
                     userRef.set(data).addOnSuccessListener {
-                        findNavController().navigate(R.id.action_register_Fragment_to_camera_screen)
+                        findNavController().navigate(R.id.action_register_Fragment_to_real_time_camera)
                     }.addOnFailureListener { e ->
                         Log.d("error","${e}")
 

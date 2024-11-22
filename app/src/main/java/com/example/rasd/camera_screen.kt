@@ -115,7 +115,7 @@ class camera_screen : Fragment() {
 
 
         secActivityBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_camera_screen_to_control_robot)
+            findNavController().navigate(R.id.action_camera_screen_to_chatgpt)
         }
 
         // Integrate camera

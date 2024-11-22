@@ -60,7 +60,7 @@ class register_info : Fragment() {
                 "pno" to pno,
             )
             userRef.set(newUser).addOnSuccessListener {
-                findNavController().navigate(R.id.action_register_info_to_camera_screen)
+                findNavController().navigate(R.id.action_register_info_to_real_time_camera)
                 Log.d("imran","3ndfail")
             }.addOnFailureListener { e ->
                 Log.d("imran","${e}")

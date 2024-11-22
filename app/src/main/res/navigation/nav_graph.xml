@@ -28,20 +28,23 @@
             android:id="@+id/action_loginScreen_to_register_Fragment"
             app:destination="@id/register_Fragment" />
         <action
-            android:id="@+id/action_loginScreen_to_camera_screen"
-            app:destination="@id/camera_screen" />
-        <action
             android:id="@+id/action_loginScreen_to_register_info"
             app:destination="@id/register_info" />
+        <action
+            android:id="@+id/action_loginScreen_to_real_time_camera"
+            app:destination="@id/real_time_camera" />
     </fragment>
     <fragment
         android:id="@+id/register_Fragment"
         android:name="com.example.rasd.Register_Fragment"
         android:label="fragment_register_"
         tools:layout="@layout/fragment_register_" >
+<!--        <action-->
+<!--            android:id="@+id/action_register_Fragment_to_camera_screen"-->
+<!--            app:destination="@id/camera_screen" />-->
         <action
-            android:id="@+id/action_register_Fragment_to_camera_screen"
-            app:destination="@id/camera_screen" />
+            android:id="@+id/action_register_Fragment_to_real_time_camera"
+            app:destination="@id/real_time_camera" />
     </fragment>
     <fragment
         android:id="@+id/home_Fragment"
@@ -56,6 +59,9 @@
         <action
             android:id="@+id/action_camera_screen_to_control_robot"
             app:destination="@id/control_robot" />
+        <action
+            android:id="@+id/action_camera_screen_to_chatgpt"
+            app:destination="@id/chatgpt" />
     </fragment>
     <fragment
         android:id="@+id/control_robot"
@@ -63,12 +69,36 @@
         android:label="fragment_camera_screen"
         tools:layout="@layout/fragment_control_robot" />
     <fragment
+        android:id="@+id/chatgpt"
+        android:name="com.example.rasd.ChatGPTFragment"
+        android:label="fragment_chat_gpt"
+        tools:layout="@layout/fragment_chat_g_p_t" />
+    <fragment
+        android:id="@+id/real_time_camera"
+        android:name="com.example.rasd.RealTimeCamera"
+        android:label="real_time_camera"
+        tools:layout="@layout/fragment_real_time_camera" >
+        <action
+            android:id="@+id/action_real_time_camera_to_camera_screen"
+            app:destination="@id/camera_screen" />
+        <action
+            android:id="@+id/action_real_time_camera_to_chatgpt"
+            app:destination="@id/chatgpt" />
+        <action
+            android:id="@+id/action_real_time_camera_to_control_robot"
+            app:destination="@id/control_robot" />
+    </fragment>
+
+    <fragment
         android:id="@+id/register_info"
         android:name="com.example.rasd.register_info"
         android:label="fragment_register_info"
         tools:layout="@layout/fragment_register_info" >
+<!--        <action-->
+<!--            android:id="@+id/action_register_info_to_camera_screen"-->
+<!--            app:destination="@id/camera_screen" />-->
         <action
-            android:id="@+id/action_register_info_to_camera_screen"
-            app:destination="@id/camera_screen" />
+            android:id="@+id/action_register_info_to_real_time_camera"
+            app:destination="@id/real_time_camera" />
     </fragment>
 </navigation>
